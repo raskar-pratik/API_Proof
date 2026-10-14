@@ -11,3 +11,17 @@ jobs:
         with:
           python-version: '3.12'
       - run: python -m unittest discover -s api-proof/scripts -p 'test_*.py' -v
+  live-smoke:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Probe a public repository over HTTPS
+        run: |
+          python api-proof/scripts/probe.py examples/github-probe.json --allow-host api.github.com --output output/probe.json
+          cat output/probe.json
