@@ -1,0 +1,14 @@
+interface:
+  display_name: APIProof
+  short_description: Prove an API fits before you integrate it
+  default_prompt: Use $api-proof to evaluate candidate APIs against my project requirements
+    and return a decision with traceable evidence.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

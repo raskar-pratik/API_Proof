@@ -1,0 +1,11 @@
+{
+  "requirement_id": "PUBLIC_REPOSITORY",
+  "url": "https://api.github.com/repos/upstash/context7",
+  "expect_status": 200,
+  "json_equals": {
+    "/full_name": "upstash/context7"
+  },
+  "json_present": [
+    "/html_url"
+  ]
+}

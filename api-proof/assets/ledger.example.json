@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "project": "Synthetic example: server-side weather dashboard",
+  "max_age_days": 30,
+  "requirements": [
+    {"id": "R1", "text": "Provides current temperature", "required": true, "proof": "documentation"},
+    {"id": "R2", "text": "Supports historical weather", "required": false, "proof": "documentation"}
+  ],
+  "candidates": [
+    {"id": "example-a", "name": "Synthetic Provider A", "evidence": [
+      {"requirement_id": "R1", "kind": "documentation", "outcome": "supports", "source": "https://provider.example/docs", "excerpt": "Synthetic fixture only: current temperature is available.", "observed_at": "2026-10-14T08:00:00Z", "note": "Illustrative input, not a real provider evaluation."}
+    ]},
+    {"id": "example-b", "name": "Synthetic Provider B", "evidence": [
+      {"requirement_id": "R1", "kind": "documentation", "outcome": "refutes", "source": "https://other-provider.example/docs", "excerpt": "Synthetic fixture only: historical observations only.", "observed_at": "2026-10-14T08:00:00Z", "note": "Illustrative input, not a real provider evaluation."}
+    ]},
+    {"id": "example-c", "name": "Synthetic Provider C", "evidence": []}
+  ]
+}
