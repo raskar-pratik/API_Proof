@@ -3,8 +3,8 @@ interface:
   short_description: Prove an API fits before you integrate it
   default_prompt: Use $api-proof to evaluate candidate APIs against my project requirements
     and return a decision with traceable evidence.
-  icon_small: assets/icon.svg
-  icon_large: assets/icon.svg
+  icon_small: assets/logo.png
+  icon_large: assets/logo.png
 policy:
   products:
   - chatgpt
