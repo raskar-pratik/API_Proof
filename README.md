@@ -20,7 +20,11 @@ The bundled example is synthetic and its fixed observation date will eventually 
 
 Documentation extraction and semantic interpretation remain agent responsibilities. The verifier checks schema, freshness, conflicts, live-artifact bindings and verdict rules. A hash ties recorded bytes to a report; it does not authenticate provider truth. A passing probe does not prove future uptime, pricing, privacy compliance or hidden model identity.
 
-The HTTPS helper uses GET/HEAD only, a host allowlist, public destination checks, verified TLS, no redirects and bounded response bytes. Credentials are read from named environment variables. Confirm an endpoint is harmless; GET does not guarantee no billing or side effects. External standalone networking was not validated in the creation environment because DNS access was blocked. A connected GitHub repository read was observed successfully and is a different transport.
+The HTTPS helper uses GET/HEAD only, a host allowlist, public destination checks, verified TLS, no redirects and bounded response bytes. Credentials are read from named environment variables. Confirm an endpoint is harmless; GET does not guarantee no billing or side effects. The creation environment had blocked DNS access. The standalone helper was subsequently verified on a GitHub Actions runner: HTTP 200, JSON parsing, a repository web URL and the expected repository identity all passed. A connected GitHub repository read was also observed successfully and is a different transport.
+
+## Validation
+
+[GitHub Actions verification](https://github.com/raskar-pratik/API_Proof/actions/runs/38541439483): 28 regression tests passed; the standalone HTTPS probe passed all four assertions. This is a bounded observation of one public endpoint, not a load test or uptime guarantee.
 
 ## License
 
